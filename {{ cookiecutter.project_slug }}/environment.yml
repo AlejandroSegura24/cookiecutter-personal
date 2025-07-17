@@ -25,6 +25,8 @@ dependencies:
   - python={{ cookiecutter.python_version }}
   - seaborn
   - openpyxl
+  - statsmodels
+  - missingno
   - pip:
     {% if cookiecutter.project_packages == "All" -%}
     - pyhere
