@@ -11,11 +11,20 @@ dependencies:
   - jupyterlab
   - pathlib
   {% endif -%}
+  - matplotlib
+  - numpy
+  - pandas
+  {% if cookiecutter.project_packages == "All" -%}
+  - pandas-flavor
+  - pandas-profiling
+  {% endif -%}
   - pip
   {% if cookiecutter.project_packages == "All" -%}
   - pyprojroot
   {% endif -%}
   - python={{ cookiecutter.python_version }}
+  - seaborn
+  - openpyxl
   - pip:
     {% if cookiecutter.project_packages == "All" -%}
     - pyhere
